@@ -53,3 +53,18 @@ ggplot(iris)+
 ```
 
 This figure shows the difference between iris flowers species ***petal*** and ***sepal lengths*** with some overlap in sepal length but very distinguished differences in petal length showing three ***distinct independent clusters.*** Representing the three species as seen with ***setosa*** (Red) in the bottom left with a short petal and sepal lengh, ***versicolor*** with a average petal and sepal length and ***virginica*** with a long petal and sepal length.
+
+```{r,warning=FALSE,echo=FALSE,message=FALSE}
+#plot data
+ggplot(iris)+
+  #scatter plot using geom point
+  geom_point(aes(x=Sepal.Width,y=Petal.Width,colour=Species))+
+  #add labels
+  labs(
+    title ="Iris flower species petal and sepal width ",
+    y='Petal width (cm)',
+    x='Sepal width (cm)',
+  )+
+  #add a theme for aesthetic
+  theme_light()
+```
