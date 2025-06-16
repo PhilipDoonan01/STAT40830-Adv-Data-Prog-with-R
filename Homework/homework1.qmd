@@ -1,0 +1,55 @@
+---
+title: "Homework 1 STAT40830-Adv Data Prog with R"
+author: "Philip Doonan "
+format: pdf
+editor: visual
+---
+
+[**Student Number:**]{.underline} 24100047
+
+```{r,warning=FALSE,echo=FALSE,message=FALSE}
+#load librarys used at start and together
+library(ggplot2)
+library(dplyr)
+library(kableExtra)
+```
+
+## [Dataset]{.underline}
+
+The dataset I have chosen to use is the ***famous iris data*** set which contains different measurements sepal, length and width as well as petal, length and width of three species of the iris flower in ***centimeters***. The three species being ***Iris setosa***, ***versicolor***, and ***virginica***. I have chosen this data set as it contains very distinct clusters between the three species. It is also ***built into R*** and so can be used with any package.
+
+```{r,warning=FALSE,echo=FALSE,message=FALSE}
+#load dataset and show first few lines
+data(iris)
+#table to show data
+kable(head(iris),align = "c",
+      caption = "First few lines of Iris dataset")|>
+  kable_styling(latex_options = c("striped"))
+```
+
+## [Plot of data]{.underline}
+
+-   Used ggplot to plot a scatter plot of ***Sepal Length*** and ***Petal length***
+
+-   Set the points colour to the ***species***. To distinguish and show three clusters
+
+-   Added main and axis titles with units(centimeters).
+
+-   Added a theme to improve plots formating
+
+```{r,warning=FALSE,echo=FALSE,message=FALSE}
+#plot data
+ggplot(iris)+
+  #scatter plot using geom point
+  geom_point(aes(x=Sepal.Length,y=Petal.Length,colour=Species))+
+  #add labels
+  labs(
+    title ="Iris flower species petal and sepal length ",
+    y='Petal Length (cm)',
+    x='Sepal Length (cm)',
+  )+
+  #add a theme for aesthetic
+  theme_light()
+```
+
+This figure shows the difference between iris flowers species ***petal*** and ***sepal lengths*** with some overlap in sepal length but very distinguished differences in petal length showing three ***distinct independent clusters.*** Representing the three species as seen with ***setosa*** (Red) in the bottom left with a short petal and sepal lengh, ***versicolor***with a average petal and sepal length and ***virginica***with a long petal and sepal length.
