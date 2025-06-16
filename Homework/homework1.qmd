@@ -14,9 +14,9 @@ library(dplyr)
 library(kableExtra)
 ```
 
-## [Dataset]{.underline}
+## [Data set]{.underline}
 
-The dataset I have chosen to use is the ***famous iris data*** set which contains different measurements sepal, length and width as well as petal, length and width of three species of the iris flower in ***centimeters***. The three species being ***Iris setosa***, ***versicolor***, and ***virginica***. I have chosen this data set as it contains very distinct clusters between the three species. It is also ***built into R*** and so can be used with any package.
+The data set I have chosen to use is the ***famous iris data*** set which contains different measurements sepal, length and width as well as petal, length and width of three species of the iris flower in ***centimeters***. The three species being ***Iris setosa***, ***versicolor***, and ***virginica***. I have chosen this data set as it contains very distinct clusters between the three species. It is also ***built into R*** and so can be used with any package.
 
 ```{r,warning=FALSE,echo=FALSE,message=FALSE}
 #load dataset and show first few lines
@@ -35,7 +35,7 @@ kable(head(iris),align = "c",
 
 -   Added main and axis titles with units(centimeters).
 
--   Added a theme to improve plots formating
+-   Added a theme to improve plots formatting
 
 ```{r,warning=FALSE,echo=FALSE,message=FALSE}
 #plot data
@@ -52,4 +52,4 @@ ggplot(iris)+
   theme_light()
 ```
 
-This figure shows the difference between iris flowers species ***petal*** and ***sepal lengths*** with some overlap in sepal length but very distinguished differences in petal length showing three ***distinct independent clusters.*** Representing the three species as seen with ***setosa*** (Red) in the bottom left with a short petal and sepal lengh, ***versicolor***with a average petal and sepal length and ***virginica***with a long petal and sepal length.
+This figure shows the difference between iris flowers species ***petal*** and ***sepal lengths*** with some overlap in sepal length but very distinguished differences in petal length showing three ***distinct independent clusters.*** Representing the three species as seen with ***setosa*** (Red) in the bottom left with a short petal and sepal lengh, ***versicolor*** with a average petal and sepal length and ***virginica*** with a long petal and sepal length.
